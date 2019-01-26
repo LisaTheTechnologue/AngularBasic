@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptngHideNShow.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>ng-Hide and ng-Show</title>
+</head>
+<body>
+    <div ng-controller="myController">
+        Search: <input type="text" ng-model="searchFilter"/>   
+        <input type="checkbox" ng-model="hideSalary"/> Hide salary
+        <br /><br />
+        <table>
+            <thead>
+                <tr>
+                    <td ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></td>
+                    <td ng-click="sortData('dob')">DOB <div ng-class="getSortClass('dob')"></div></td>
+                    <td ng-hide="hideSalary" ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></td>
+                    <td ng-show="hideSalary" ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></td>
+                    <td ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></td>
+                    <td ng-click="sortData('status')">Status <div ng-class="getSortClass('status')"></div></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | orderBy:sortColumn:reverse | filter:searchFilter">
+                    <td>{{employee.name | uppercase}}</td>
+                    <td>{{employee.dob | date:"dd/MM/yyyy"}}</td>
+                    <td ng-hide="hideSalary">{{employee.salary | currency}}</td>
+                    <td ng-show="hideSalary">xxxxxxx</td>
+                    <td>{{employee.gender }}</td>
+                    <td>{{employee.status | statusFilter }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+
+</html>

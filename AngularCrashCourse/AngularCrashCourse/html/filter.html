@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptFilter.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Filter</title>
+</head>
+<body>
+    <div ng-controller="myController" >
+      Show: <input type="number" ng-model="limitRow">
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>DOB</td>
+                    <td>Salary</td>
+                    <td>Gender</td>
+                    <td>Status</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | limitTo: limitRow">
+                    <td>{{employee.name | uppercase}}</td>
+                    <td>{{employee.dob | date:"dd/MM/yyyy"}}</td>
+                    <td>{{employee.salary | currency}}</td>
+                    <td>{{employee.gender }}</td>
+                    <td>{{employee.status | statusFilter }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+
+</html>

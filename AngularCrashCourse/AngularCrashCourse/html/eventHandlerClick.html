@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptEventHandlerClick.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Event Handler</title>
+</head>
+<body>
+    <h3>Click</h3>
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Likes</td>
+                    <td>Dislikes</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="technology in technologies">
+                    <td>{{technology.Name}}</td>
+                    <td>{{technology.Likes}}</td>
+                    <td>{{technology.Dislikes}}</td>
+                    <td>
+                        <button ng-click="increaseLike(technology)">Like</button>
+                        <button ng-click="increaseDislike(technology)">Dislike</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptIntro.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Intro</title>
+</head>
+<body>
+    <h3>ng-app</h3>
+    <div>10 + 20 = {{10+20}} </div> <!--only need ng-app in html-->
+    <br />
+    
+    <h3>ng-controller</h3>
+    <div ng-controller="myController">
+        {{message}}
+    </div>
+    <br />
+
+    <h3>ng-controller in textbox</h3>
+    <div ng-controller="myController3">
+        First Name : <input type="text" ng-model="employee.FirstName" /><br />
+        First Name: {{employee.FirstName}}
+
+    </div>
+
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+
+</html>

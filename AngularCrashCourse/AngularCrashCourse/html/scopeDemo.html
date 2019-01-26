@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptScopeDemo.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Scope</title>
+</head>
+<body ng-app="myModule">
+    <h3>$scope</h3>
+    <div ng-controller="myController">
+        <input type="text" ng-model="name" />
+        <button ng-click="sayHello()">Click</button>
+        <br />
+        {{name}}
+
+    </div>
+    <br />
+    <h3>$rootScope</h3>
+    <div ng-controller="myController1">
+        <div> 1.{{name}}</div>
+    </div>
+    <div ng-controller="myController2">
+        <div> 2.{{name}}</div>
+    </div>
+    <br />
+    <h3>Nested Scope</h3>
+    <div ng-controller="myControllerTop">
+        <div>Top: {{name}}</div>
+        <div ng-controller="myController1">
+            {{name}}
+        </div>
+        <div ng-controller="myController2">
+             {{name}}
+        </div>
+    </div>
+
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+
+</html>

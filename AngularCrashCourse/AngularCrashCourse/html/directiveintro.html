@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="myDirective">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptDirectiveIntro.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Directive Intro</title>
+</head>
+<body>
+    <h3>Init</h3>
+    <div ng-controller="directiveCtrler" ng-init="DemoMsg = 'Demo Directive message'">
+        {{DemoMsg}}
+    </div>
+
+    <h3>Create Directive 1</h3>
+    <div ng-controller="directiveCreated" ng-init="DemoMsg = 'Demo Directive message'">
+        <div welcome-text></div>
+    </div>
+
+    <h3>Create Directive 2 (by AngularJS Guide)</h3>
+    <div ng-controller="Controller">
+        <div my-customer></div>
+    </div>
+
+    <h3>Create Directive 3 : URL (plain html)</h3>
+    <div ng-controller="url">
+        <div my-directive></div>
+    </div>
+
+    <h3>Create Directive 3 : URL (angular html - by AngularJS Guide)</h3>
+    <div ng-controller="Controller2">
+        <div my-customer2></div>
+    </div>
+
+    
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+</html>

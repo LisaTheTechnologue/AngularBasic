@@ -1,0 +1,47 @@
+﻿body{
+    margin:30px;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+button{
+    width:100px;
+}
+p{
+    text-align:center;
+    margin-top:20px;
+}
+div{
+    margin-left:100px;
+}
+table tr td{
+    border: 2px inset grey;
+    margin:10px;
+}
+td{
+    padding:5px;
+}
+thead{
+    font-weight:bold;
+}
+
+/*Table Header Click Event Style*/
+/*This class displays the UP arrow*/
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid black;
+    display: inline-block;
+}
+/*This class displays the DOWN arrow*/
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+    display: inline-block;
+}

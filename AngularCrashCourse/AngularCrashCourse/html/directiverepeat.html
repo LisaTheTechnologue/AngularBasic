@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptDirectiveRepeat.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Directive 2 (ng-repeat)</title>
+</head>
+<body ng-app="myModule">
+    <h3>ng-repeat</h3>
+    <table ng-controller="repeatController">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="friend in friends">
+                <td>{{friend.name}}</td>
+                <td>{{friend.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Nested ng-repeat</h3>
+    <div ng-controller="nestedRepeatController">
+        <ul>
+            <li ng-repeat="country in countries" ng-init="parentIndex = $index">
+                {{country.name}} - Index {{$index}}
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}} - Index {{$index}} - Parent Index - {{parentIndex}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <p><a href="Contents.html"><button>Back</button></a></p>
+</body>
+</html>
