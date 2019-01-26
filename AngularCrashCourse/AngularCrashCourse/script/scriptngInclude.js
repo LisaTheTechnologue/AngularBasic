@@ -13,6 +13,9 @@
         ];
         $scope.employees = employees;
 
+        //ng-Include : use the same for both ways because it will change the value with the link we choose
+        $scope.tableEmployeeView = 'ngHideNShow.html';
+
         //search filter
         $scope.searchFilter = '';
 
