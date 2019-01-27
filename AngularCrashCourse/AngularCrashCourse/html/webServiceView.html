@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="../script/scriptWebService.js"></script>
+    <link rel="stylesheet" href="../style/default.css">
+    <title>Web Service </title>
+</head>
+<body>
+    <div ng-controller="myController">
+        <table>
+            <!--<thead>-->
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Gender</td>
+                    <td>Salary</td>
+                    <td>Birthday</td>
+                </tr>
+            <!--</thead>
+            <tbody>-->
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.Id}}</td>
+                    <td>{{employee.Name}}</td>
+                    <td>{{employee.Gender}}</td>
+                    <td>{{employee.Salary}}</td>
+                    <td>{{employee.Birthday}}</td>
+                </tr>
+            <!--</tbody>-->
+        </table>
+    </div>
+
+</body>
+
+</html>

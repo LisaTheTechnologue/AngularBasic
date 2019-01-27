@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="database script\WebServiceEmployees.sql" />
     <Content Include="html\Contents.html" />
     <Content Include="html\directiveintro.html" />
     <Content Include="html\directiverepeat.html" />
@@ -81,6 +82,8 @@
     <Content Include="html\scopeDemo.html" />
     <Content Include="html\searchfilter.html" />
     <Content Include="html\tableheaderclickevent.html" />
+    <Content Include="html\webService.asmx" />
+    <Content Include="html\webServiceView.html" />
     <Content Include="script\scriptClickTableHeader.js" />
     <Content Include="script\scriptDirectiveIntro.js" />
     <Content Include="script\scriptDirectiveRepeat.js" />
@@ -92,10 +95,16 @@
     <Content Include="script\scriptOrder.js" />
     <Content Include="script\scriptScopeDemo.js" />
     <Content Include="script\scriptSearchFilter.js" />
+    <Content Include="script\scriptWebService.js" />
     <Content Include="style\default.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class\EmployeeModel.cs" />
+    <Compile Include="html\webService.asmx.cs">
+      <DependentUpon>webService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
